@@ -230,7 +230,16 @@
 
 \begin{homeworkProblem}
 	\begin{enumerate}[(a)]
-		\item TODO
+		\item Wir verwenden die Methode der Kolmogorov-Komplexitaet um zu zeigen das $L_1$ nicht regulaer ist. Sei $L_1 =\{ 0^{\binom{2n}{n} }| n \in \mathbb{N}\}$. \textit{Angenommen} $L_1$ sei regulaer. Fuer jedes $m\in \mathbb{N} $ gilt, dass $\binom{2(m+1)}{(m+1)}-\binom{2m}{m} = \frac{(2m)!(m+1)(-m+1)}{((m+1)!)^2}$. $0^\frac{(2m)!(m+1)(-m+1)}{((m+1)!)^2} -1$ ist das erste Wort in der Sprache 
+		$$L_{\binom{2m}{m}+1} =\{y| 0^{\binom{2m}{m}+1} y \in L\}$$
+		
+		Satz 3.1 folgend existiert eine Konstante c, die unabhaengig von x = $0^{\binom{2m}{m}+1}$ und y = $0^ {\frac{(2m)!(m+1)(-m+1)}{((m+1)!)^2-1}} $ und somit von m ist, so dass
+		
+		$$K(0^ {\frac{(2m)!(m+1)(-m+1)}{((m+1)!)^2}-1}) \leq \lceil log_2 (1+1)\rceil + c = 1+c$$
+		
+		Dies ist ein Widerspruch. Es gibt nur endlich viele Programme der konstanten Laenge hoechstens 1+c gibt, aber es gibt unendlich viele Woerter der Form $0^ {\frac{(2m)!(m+1)(-m+1)}{((m+1)!)^2-1}}$. Also ist die Annahme falsch und $L_1$ ist nicht regulaer.
+		
+		
 		
 	 
 	\end{enumerate}
@@ -281,7 +290,7 @@
 			\end{center}
 		fuer irgendwelche $a,b\in \mathbb{N}$. Wegen (ii) gilt $b > 0$. Da $w \notin L_3$ gilt nach (iii)
 		
-			$$\{yx^kz| k \in \mathbb{N}|\} =\{ 0^{n_0 + (k-1)b}1^{n_0}| k \in \mathbb{N}|\} \cap \emptyset $$
+			$$\{yx^kz| k \in \mathbb{N}\} =\{ 0^{n_0 + (k-1)b}1^{n_0}| k \in \mathbb{N}\} \cap \emptyset $$
 			
 		Dies ist aber ein Widerspruch. Fuer k = 2 gilt $yx^2z =0^{n_0 +kb}1^{n_0} \in L_3$. Also ist die Annahme falsch und $L_3$ ist 			nicht regulaer
 		
@@ -292,19 +301,21 @@
 	\begin{enumerate}[(b)]
 	\item
 		\begin{enumerate}[]
-			\item Es sei $L:= \{w \in \{0,1\}^* | |w|_0 = |w|_1 \}$. Es existiert eine Konstante $n_0$. Alle Woerter in der Sprache mit 				einer Laenge von mindestens $n_0$ muss eine Zerlegung besitzen, die die Eigenschaften (i'), (ii), (iii') erfuellt. Wir 					waehlen fuer w=yxz die folgende Zerlegung:
-			$$y:=\lambda$$
-			$$x:= a$$
-			$$z:= a^{|w|-1}$$
-		
-			$$a \in \{0,1\}$$
+			\item Wir wollen zegen, dass die nichtregulaere Sprache L die Bedingungen des abgeschwaechte Pumping-Lemmas erfuellt.\\ Es sei $L:= \{w \in \{0,1\}^* | |w|_0 = |w|_1 \}$. Es existiert eine Konstante $n_0$. Alle Woerter in der Sprache mit einer Laenge von mindestens $n_0$ muss eine Zerlegung besitzen, die die Eigenschaften (i'), (ii), (iii') erfuellt.\\
+			Woerter, die 01 oder 10 nicht als Infix haben sind nicht in der Sprache enthalten. Nach der abgeschwaechte Version des Pumping-Lemmas muessen wir nur die Woerter $w\in L$ betrachten.
+			\item Besitzt w hingegen 01 oder 10 als Infix, hat w die Form yxz. Dabei ist $x\in\{01,10\}$. Da wir $n_0 := 2$ waelen, sind die Bedingungen (i') und (ii) erfuellt. Denn es gilt $1\leq x \leq n_0$.\\
+			Die dritte Bedingung $\{yx^kz| k\in \mathbb{N}\} \subseteq ist auch erfuellt denn es gilt:$
 			
-			Offensichtlich gilt $|w| \geq n_0$.
-			
-			\textbf{Fall 1:}
-			
-			\textbf{Fall 2:}
-			
+			\begin{center}
+				$|yx^kz|_a-|yx^kz|_b$\\
+				=$(|y|_a + |x^k|_a+ |z|_a) - (|y|_b + |x^k|_b+ |z|_b)$\\
+				=$(|y|_a + k*|x|_a+ |z|_a) - (|y|_b + k*|x|_b+ |z|_b)$\\
+				=$(|y|_a + k+ |z|_a) - (|y|_b + k+ |z|_b)$\\
+				=$(|yz|_a + k) - (|yz|_b + k)$\\
+				=$(|w|_a + (k-1)) - (|w|_b + (k-1))$\\
+				=$(|w|_a) - (|w|_b)$\\
+			\end{center}
+			Da w in der Sprache ist, ist diese Zahl gleich null.
 
 		
 		\end{enumerate}

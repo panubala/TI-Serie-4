@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.21)  14 OCT 2015 15:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.9.21)  14 OCT 2015 18:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1032,85 +1032,87 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 LaTeX Warning: The counter will not be printed.
-             The label is: (b) on input line 238.
+             The label is: (b) on input line 247.
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 240.
+             The label is:  on input line 249.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--243
+Underfull \hbox (badness 10000) in paragraph at lines 250--252
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 244--245
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 250--253
+Underfull \hbox (badness 10000) in paragraph at lines 259--262
 
  []
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 271.
-
-
-LaTeX Warning: The counter will not be printed.
-             The label is: (b) on input line 292.
-
-
-LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 294.
+             The label is:  on input line 280.
 
 [2]
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 316.
+             The label is: (b) on input line 301.
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is: (b) on input line 358.
+             The label is:  on input line 303.
 
 
 LaTeX Warning: The counter will not be printed.
-             The label is:  on input line 360.
+             The label is:  on input line 327.
 
-[3] 
+[3]
+
+LaTeX Warning: The counter will not be printed.
+             The label is: (b) on input line 369.
+
+
+LaTeX Warning: The counter will not be printed.
+             The label is:  on input line 371.
+
+
 AED: lastpage setting LastPage
 [4] (./La.aux) ) 
 Here is how much of TeX's memory you used:
- 21429 strings out of 493089
- 456271 string characters out of 6134842
- 550401 words of memory out of 5000000
- 24509 multiletter control sequences out of 15000+600000
- 12802 words of font info for 49 fonts, out of 8000000 for 9000
+ 21427 strings out of 493089
+ 456250 string characters out of 6134842
+ 551401 words of memory out of 5000000
+ 24508 multiletter control sequences out of 15000+600000
+ 12494 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,12n,69p,846b,1130s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,11n,69p,846b,1130s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
+/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-
-Output written on La.pdf (4 pages, 136161 bytes).
+/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr
+/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/l
+ocal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on La.pdf (4 pages, 155673 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
- 49 compressed objects within 1 object stream
+ 76 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
