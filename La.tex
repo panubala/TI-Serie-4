@@ -257,6 +257,8 @@
 		\item $\Rightarrow 2j > |w|_a$
 		\item $\Rightarrow |w|_b > |w|_a$
 		\item $\Rightarrow w \not\in L$
+		
+		\item Also ist die Annahme falsch und $L_2$ ist nicht regulaer
 		\end{enumerate}
 	\end{enumerate}
 	
@@ -267,13 +269,21 @@
 	\begin{enumerate}[(a)]
 	\item
 		\begin{enumerate}[]
-		\item Wir fuehren ein Widerspruchsbeweis. \textit{Annahme}: L ist regulaer. Dann gilt das \textit{Pumping Lemma}. //
-		Dann existiert eine Konstante $n_0$ mit den in Lemma 3.4 beschriebenen Eigenschaften. Wir betrachten das Wort $$w= 			0{n_0}1{n_0}.$$
-		Es ist klar, dass $|w| = 2n_0 \geq n_0$. Es existiert nach Lemma 3.4 eine Zerlegung $w=xyz$
-		$$y = 0^a$$
-		$$x = 0^b$$
-		$$z = 0^{n_0 -a -b}1^n_0  $$
-		fuer irgendwelche $a,b\in \mathbb{N}$. Nach (i) gilt $b \ne 0$.
+		\item Wir fuehren ein Widerspruchsbeweis. 
+		\item \textit{Annahme}: L ist regulaer. Dann ist das \textit{Pumping Lemma} anwendbar. 
+		Es existiert eine Konstante $n_0$ mit den in \textit{Lemma 3.4} beschriebenen Eigenschaften. Wir betrachten das Wort 
+		$$w= 0^{n_0}1^{n_0}.$$
+		Offensichtlich gilt $|w| = 2n_0 \geq n_0$. Also muss eine Zerlegung w = yxz von w geben, die die Bedingungen (i), (ii) und (iii) 			erfuellt. Wegen (i) gilt $|yx| \leq n_0$ also ist 
+			\begin{center}
+				$y = 0^a$\\
+				$x = 0^b$\\
+				$z = 0^{n_0 -a -b}1^{n_0}$ \\
+			\end{center}
+		fuer irgendwelche $a,b\in \mathbb{N}$. Wegen (ii) gilt $b > 0$. Da $w \notin L_3$ gilt nach (iii)
+		
+			$$\{yx^kz| k \in \mathbb{N}|\} =\{ 0^{n_0 + (k-1)b}1^{n_0}| k \in \mathbb{N}|\} \cap \emptyset $$
+			
+		Dies ist aber ein Widerspruch. Fuer k = 2 gilt $yx^2z =0^{n_0 +kb}1^{n_0} \in L_3$. Also ist die Annahme falsch und $L_3$ ist 			nicht regulaer
 		
 		
 		\end{enumerate}
@@ -301,6 +311,50 @@
 	\end{enumerate}
 \end{homeworkProblem}
 \begin{homeworkProblem}
+	\begin{enumerate}[(a)]
+	\item
+	\begin{enumerate}[]
+	\item Der folgende nichtdeterministische endliche Automat A akzeptiert die Sprache
+		$$L = \{ x \in \{0,1\}^* | |x|_1 \text {mod 3 = 0 oder x enthaelt ein Teilwort 1y1 fuer y} \in \{0,1\}^2 \}:$$
+	
+				\begin{center}
+					\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.8cm,
+					semithick,every node/.style={scale=1}]
+					\tikzstyle{every state}=[circle,text=black]
+					
+					\node[initial,state,accepting]		(1)             		{$q_\lambda$};
+					\node[state,accepting]			(2) [above right of=1]	{$q_0$};
+					\node[state]					(3) [right of=2]		{$q_1$};
+					\node[state]					(4) [right of=3]		{$q_2$};
+					\node[state]					(5) [below right of=1]	{$p_0$};
+					\node[state]					(6) [right of=5]		{$p_1$};
+					\node[state]					(7) [right of=6]		{$p_2$};
+					\node[state]					(8) [right of=7]		{$p_3$};
+					\node[state,accepting]			(9) [right of=8]		{$p_4$};
+					
+					\path	(1)	edge  							node {0}	(2)
+					(1)		edge 							node {1}	(3)
+					(1)		edge [below left]					node {0,1}	(5)
+					(1)		edge  							node {1}	(6)
+					(2)		edge 							node {1}	(3)
+					(2)		edge [loop above]					node {0}	(2)
+					(3)		edge 							node {1}	(4)
+					(3)		edge [loop above]					node {0}	(3)
+					(4)		edge [bend left]						node {1}	(2)
+					(4)		edge [loop above]					node {0}	(4)
+					(5)		edge [loop below]					node {0,1}	(5)
+					(5)		edge								node {1}	(6)
+					(6)		edge 							node {0,1}	(7)
+					(7)		edge 							node {0,1}	(8)
+					(8)		edge 							node {1}	(9)
+					(9)		edge [loop below]					node {0,1}	(9)
+					;
+					\end{tikzpicture}
+				\end{center}
+	\item Dieser Automat besteht aus zwei Teilautomaten. Der Teilautomat mit den Zustaenden $q_1, q_2$ und $q_3$ zaehlt die Einsen 
+	in der Eingabe modulo 3 und akzeptiert wenn dies 0 ergibt. Der zweite Teilautomat mit den Zustaenden $p_1,p_2,p_3$ und $p_4$ 		sucht das 	Teilwort 1y1 fuer $y \in \{0,1\}^2$ und akzeptiert wenn das Teilwort gefunden wurde. Im Startzustand $q_\lambda$ 			verzweigt der Automat nichtdeterministisch in beiden Teilautomaten. Beim Uebergang in den ersten Teilautomaten muss die 1 			mitgezaelt werden. Deshalb fuert diese Transition direkt zum Zustand $q_1$. Bei der Eingabe 1 gibt es im Uebergang zum zweiten 		Teilautomaten zwei Moeglichkeiten. Die gelesene 1 kann der Anfang des gesuchten Teilwortes sein oder nicht. Weil auch das leere 		Wort die Bedingung $|\lambda|_1 \text{mod  3} = 0 $ erfuellt, ist auch $q_\lambda$ ein akzeptierender Zustand.
+	\end{enumerate}
+	\end{enumerate}
 	\begin{enumerate}[(b)]
 		\item
 			\begin{enumerate}[]
